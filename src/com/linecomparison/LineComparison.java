@@ -51,5 +51,11 @@ public class LineComparison {
         else{
                 System.out.println("Lengths of Line1 and Line2 are not same");
             }
+        System.out.println();
+        System.out.println(obj2.compareTo(obj1));
+
+        // if output is 0 the length is same
+        // if output is 1 then the length of line2 is greater than line1
+        // if output is -1 then the length of line1 is greater than line2
     }
 }
