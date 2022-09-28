@@ -10,6 +10,31 @@ public class LineComparison {
 
         return dis;
     }
+
+    public static void CompareLines(double line1, double line2){// CompareLine method added to compare 2 lengths of lines
+        Double obj1 = line1;
+        Double obj2 = line2;
+        if(obj1.equals(obj2)){ // UC2 to check equality of line1 and line2
+            System.out.println("Lengths of Line1 and Line 2 are same");
+        }
+        else{
+            System.out.println("Lengths of Line1 and Line2 are not same");
+        }
+        int n = obj2.compareTo(obj1);
+        System.out.println();
+        if(n==0){
+            System.out.println("Line1 and Line2 are Equal!");
+        } else if (n==1) {
+            System.out.println("Line2 is greater than Line1");
+        }else{
+            System.out.println("Line1 is greater than Line2");
+        }
+
+        // if output is 0 the length is same
+        // if output is 1 then the length of line2 is greater than line1
+        // if output is -1 then the length of line1 is greater than line2
+
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Problem!");
         Scanner sc = new Scanner(System.in);
@@ -24,7 +49,7 @@ public class LineComparison {
         double y2 = sc.nextDouble();
 
         System.out.print("Length of Line1 is : ");// Line1 Length
-       double line1 = lengthOfLine(x1,x2,y1,y2);
+       double line1 = lengthOfLine(x1,x2,y1,y2); // Line 1 coordinates added in method lengthOfLine();
         System.out.println(line1);
 
         System.out.println("");
@@ -40,22 +65,11 @@ public class LineComparison {
         double b2 = sc.nextDouble();
 
         System.out.print("Length of Line2 is : ");
-        double line2 = lengthOfLine(a1,a2,b1,b2);
+        double line2 = lengthOfLine(a1,a2,b1,b2);//Line 1 coordinates added in method lengthOfLine();
         System.out.println(line2);
 
-        Double obj1 = line1;
-        Double obj2 = line2;
-        if(obj1.equals(obj2)){ // UC2 to check equality of line1 and line2
-            System.out.println("Lengths of Line1 and Line 2 are same");
-        }
-        else{
-                System.out.println("Lengths of Line1 and Line2 are not same");
-            }
-        System.out.println();
-        System.out.println(obj2.compareTo(obj1));
+        CompareLines(line1,line2);
 
-        // if output is 0 the length is same
-        // if output is 1 then the length of line2 is greater than line1
-        // if output is -1 then the length of line1 is greater than line2
+
     }
 }
